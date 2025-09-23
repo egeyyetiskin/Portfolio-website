@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(31, 31, 31);
+}
+
+nav a {
+    color:#00ffffff;
+    text-shadow: 0 0 3px #00ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 1.5rem;
+    transition: text-shadow 0.1s ease;
+    text-align: center;
+    padding: 0rem;
+}
+nav:hover a {
+    text-shadow: 0 0 15px #00ffffff;
+    font-family: sans-serif;
+}
+nav {
+    z-index: 10;
+    position:relative;
+    top: -20px;
+    left: 30px;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none ;
+}
+
+.Headliner {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 6px #ffffff;
+    transform: translate(-50%, -50%); /* pull back by half its size */
+}
+
+.Organiser {
+    position: absolute;
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(3, 19rem); /* lock to card width */
+    justify-items: center;
+
+    /* Centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.MainNaviCard {
+    position: relative;
+    width: 19rem;
+    height: 24rem;
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    transition: all 0.3s ease;
+}
+
+.MainNaviCard:hover {
+    box-shadow: 0 0 50px #FFD700; /* optional glow */
+    transform: scale(1.05); /* tiny zoom-in */
+}
+.MainNaviCard:hover h1,
+.MainNaviCard:hover p {
+    text-shadow: 0 0 6px #ffffff;
+}
+
+.MainNaviCard h1,
+.MainNaviCard p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 3px #ffffff;
+    transition: text-shadow 0.3s ease;
+    text-align: center;
+    padding: 0rem;
+}
+
+.MainNaviCard p {
+    font-family:sans-serif;
+    padding: 3rem;
+    letter-spacing: 0.004rem;
+}
+
+.MainNaviCard h1 {
+    font-size: 3rem;
+}
