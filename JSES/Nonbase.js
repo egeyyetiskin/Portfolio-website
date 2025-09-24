@@ -1,6 +1,12 @@
 // Get the canvas element and its 2D rendering context
 const canvas = document.getElementById("stars");
 const ctx = canvas.getContext("2d");
+const returns = document.getElementsByClassName("retb");
+Array.from(returns).forEach(element => {
+    element.onclick = function() {
+        window.location.href = "../index.html";
+    }
+});
 
 // Set canvas size to fill the window
 canvas.width = window.innerWidth;
@@ -37,6 +43,13 @@ let lastTime = performance.now(); // For animation timing
 
 // Main animation loop
 function drawStars(now) {
+    if (canvas.width !== window.innerWidth) {
+        canvas.width = window.innerWidth;
+    }
+    if (canvas.height !== window.innerHeight) {
+        canvas.height = window.innerHeight;
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
     const deltaTime = (now - lastTime) / 1000; // Time since last frame in seconds
     lastTime = now;

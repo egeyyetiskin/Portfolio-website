@@ -8,12 +8,12 @@ nav a {
     font-family: sans-serif;
     margin: 0;
     font-size: 1.5rem;
-    transition: text-shadow 0.1s ease;
+    transition: text-shadow 0.27s ease;
     text-align: center;
     padding: 0rem;
 }
 nav:hover a {
-    text-shadow: 0 0 15px #00ffffff;
+    text-shadow: 0 0 15px #00ffffff, 0 0 5px #00ffffff;
     font-family: sans-serif;
 }
 nav {
@@ -67,12 +67,36 @@ canvas {
     padding: 1rem 1rem;
     border-radius: 50px;
     border: 1px solid #FFD700;
-    box-shadow: 0 0 10px #FFD700;
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700 inset;
     transition: all 0.3s ease;
 }
 
+.secondarybutton {
+    position: relative;
+    width: 12rem;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #de3affff;
+    box-shadow: 0 0 10px #de3affff;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0);
+    color: #de3affff;
+    text-shadow: 0 0 3px #de3affff;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.secondarybutton:hover {
+    box-shadow: 0 0 20px #de3affff; /* optional glow */
+    transform: scale(1.05); /* tiny zoom-in */
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: 0 0 9px #de3affff, 0 0 3px #de3affff
+}
+
 .MainNaviCard:hover {
-    box-shadow: 0 0 50px #FFD700; /* optional glow */
+    box-shadow: 0 0 50px #FFD700, 0 0 60px #FFD700 inset; /* optional glow */
     transform: scale(1.05); /* tiny zoom-in */
 }
 .MainNaviCard:hover h1,

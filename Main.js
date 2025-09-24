@@ -37,6 +37,13 @@ let lastTime = performance.now(); // For animation timing
 
 // Main animation loop
 function drawStars(now) {
+    if (canvas.width !== window.innerWidth) {
+        canvas.width = window.innerWidth;
+    }
+    if (canvas.height !== window.innerHeight) {
+        canvas.height = window.innerHeight;
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
     const deltaTime = (now - lastTime) / 1000; // Time since last frame in seconds
     lastTime = now;
